@@ -9,9 +9,7 @@ type Store = {
 };
 
 export const zustantStore = create<Store>((set) => ({
-  isDark: localStorage.getItem("theme")
-    ? localStorage.getItem("theme") === "dark"
-    : config.defaultTheme === "dark",
+  isDark: config.defaultTheme === "dark",
 
   changeTheme: () => {
     set((state) => {
