@@ -1,11 +1,12 @@
 # Wondering how to make one for you?
 
+# Read the complete docs in [Notion](https://global-vulture-225.notion.site/Resume-b9a259743fdb4f06b2fd53011631a9f9)
+
 ## Wanted the same portfolio that I have made for you? Follow these steps.
 
 1. Go to the [repository](https://github.com/SarathAdhi/Nextjs-X-Notion) and download the ZIP file.
 
 ![image](https://user-images.githubusercontent.com/91727830/201504670-b10c287d-bac1-4449-826e-6d32a393841f.png)
-
 
 2. After downloading the file, extract it
 
@@ -18,7 +19,6 @@ after extracting, the file structure looks something like this
 3. Open the project in VSCode or your favorite code editor and install the packages by using yarn
 
 ![image](https://user-images.githubusercontent.com/91727830/201504708-24bbf3ee-47ab-4216-9e6c-b9fba3f1110f.png)
-
 
 4. After installing the packages or node modules, you can run the development server by
 
@@ -82,20 +82,14 @@ module.exports = {
 
 **showNavbar: false**
 
-  ![image](https://user-images.githubusercontent.com/91727830/201504793-ecf6bdbf-b1fa-47c1-9b49-78f160c5033b.png)
-
+![image](https://user-images.githubusercontent.com/91727830/201504793-ecf6bdbf-b1fa-47c1-9b49-78f160c5033b.png)
 
 - **navigationBarTitle: "Hii 👋, I'm Sarath"**
   ![image](https://user-images.githubusercontent.com/91727830/201504806-836243a0-bf37-4aa4-af34-7cabb5e7525f.png)
-
-  
 - **_defaultTheme: “dark”_**
   ![image](https://user-images.githubusercontent.com/91727830/201504815-fbba1587-53ba-4e39-8650-c52204f5f33c.png)
-
-  
 - **_defaultTheme: “light”_**
   ![image](https://user-images.githubusercontent.com/91727830/201504822-f2243c8d-bd80-4990-b175-4eaa5a048389.png)
-
 
 ## Boom, now save everything, your portfolio is done 🥳🎉
 
