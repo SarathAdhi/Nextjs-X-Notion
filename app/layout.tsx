@@ -4,15 +4,20 @@ import { Navbar } from "../common/components/Navbar";
 import "./globals.css";
 import clsx from "clsx";
 import { zustantStore } from "../common/utils/store";
+import { useEffect, useState } from "react";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  if (typeof window === "undefined") return <></>;
+  const { isDark, setTheme } = zustantStore();
+  const [isLoading, setIsLoading] = useState(true);
 
-  const { isDark } = zustantStore();
+  useEffect(() => {
+    setIsLoading(false);
+    if (!isLoading) setTheme();
+  }, [isLoading]);
 
   return (
     <html>
@@ -23,9 +28,12 @@ export default function RootLayout({
           isDark ? "bg-[#191919]" : "bg-white"
         )}
       >
-        <Navbar />
-
-        <main className="flex flex-col flex-1">{children}</main>
+        {!isLoading && (
+          <>
+            <Navbar />
+            <main className="flex flex-col flex-1">{children}</main>
+          </>
+        )}
       </body>
     </html>
   );

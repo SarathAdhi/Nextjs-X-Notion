@@ -5,9 +5,8 @@ import React from "react";
 import { zustantStore } from "../common/utils/store";
 
 const Loading = () => {
-  if (typeof window === "undefined") return <></>;
-
   const { isDark } = zustantStore();
+
   return (
     <div className="h-[90vh] flex justify-center items-center">
       <Image
