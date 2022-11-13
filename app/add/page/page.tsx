@@ -4,8 +4,11 @@ import React, { useState } from "react";
 import { addDoc, query, where, getDocs } from "firebase/firestore";
 import { notionCollectionRef } from "../../../common/lib/firebase";
 import { toast } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const AddNotion = () => {
+  const router = useRouter();
+
   const [values, setValues] = useState({ name: "", notionId: "" });
 
   async function handleSubmit(e: React.FormEvent) {
@@ -27,13 +30,10 @@ const AddNotion = () => {
       return;
     }
 
-    if (/[A-Z]/.test(name)) {
-      toast.error("Name must be in lowercase");
-      return;
-    }
-
     await addDoc(notionCollectionRef, values);
-    toast.success("Added successfully");
+    toast.success("Added successfully. Redirecting...");
+
+    router.replace(`/u/${name}`);
   }
 
   return (

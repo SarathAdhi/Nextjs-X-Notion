@@ -3,5 +3,6 @@ module.exports = {
   title: "Sarath Portfolio",
   showNavbar: true,
   navigationBarTitle: "Hii 👋, I'm Sarath",
-  defaultTheme: "dark", // "dark" or "light"
+  defaultTheme: "dark", // "dark" or "light",
+  isPersonalSite: true,
 };

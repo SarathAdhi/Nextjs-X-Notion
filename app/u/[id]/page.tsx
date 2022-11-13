@@ -25,7 +25,7 @@ async function getNotionPage(id: string) {
     ...doc.data(),
   })) as UserProps[];
 
-  if (result.length === 0) return { error: "Notion page not found", page: "" };
+  if (result.length === 0) return { error: "User not found", page: "" };
 
   try {
     const recordMap = await notion.getPage(result[0].notionId);
@@ -42,12 +42,13 @@ const ViewPage = ({ params }: Props) => {
 
   console.log(result);
 
-  if (result.error || !result.recordMap)
+  if (result.error || !result.recordMap) {
     return (
       <h1 className="mt-10 w-full font-semibold text-xl dark:text-white text-center">
         {result.error}
       </h1>
     );
+  }
 
   return <NotionRender recordMap={result.recordMap as ExtendedRecordMap} />;
 };

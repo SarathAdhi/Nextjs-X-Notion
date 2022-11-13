@@ -15,9 +15,12 @@ export const Navbar = () => {
 
   return (
     <header className="w-full px-4 py-3 z-[9999] flex justify-between items-center border-b dark:bg-[#191919] bg-white">
-      <h1 className="text-2xl font-bold truncate mr-4 dark:text-white text-black">
+      <Link
+        href="/"
+        className="text-2xl font-bold truncate mr-4 dark:text-white text-black"
+      >
         {config.navigationBarTitle}
-      </h1>
+      </Link>
 
       <div className="flex items-center gap-4">
         <Link
@@ -32,11 +35,28 @@ export const Navbar = () => {
           />
         </Link>
 
+        <Link href="/add/page" className="dark:text-white">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-8 h-8"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+        </Link>
+
         <button onClick={changeTheme}>
           {isDark ? (
-            <SunIcon className="w-6 h-6 text-sky-500" />
+            <SunIcon className="w-7 h-7 text-sky-500" />
           ) : (
-            <MoonIcon className="w-6 h-6 text-sky-500" />
+            <MoonIcon className="w-7 h-7 text-sky-500" />
           )}
         </button>
       </div>

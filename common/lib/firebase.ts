@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { collection, getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAuoWzQAsPcEgTgUWxMs6vGabioUkq6kDo",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "nextjs-x-notion.firebaseapp.com",
   projectId: "nextjs-x-notion",
   storageBucket: "nextjs-x-notion.appspot.com",
-  messagingSenderId: "640944060364",
-  appId: "1:640944060364:web:60ec7f3416aecee4e94f69",
+  messagingSenderId: process.env.FIREBASE_MESSAGING_ID,
+  appId: process.env.FIREBASE_APP_ID,
   measurementId: "G-P97Z5700ZS",
 };
 
