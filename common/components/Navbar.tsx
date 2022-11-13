@@ -35,14 +35,18 @@ export const Navbar = () => {
           />
         </Link>
 
-        <Link href="/add/page" className="dark:text-white">
+        <Link
+          href="/add/page"
+          className="p-[1px] rounded-md font-semibold dark:bg-white text-black"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth="1.5"
+            strokeWidth="2"
             stroke="currentColor"
-            className="w-8 h-8"
+            width={26}
+            height={26}
           >
             <path
               strokeLinecap="round"
