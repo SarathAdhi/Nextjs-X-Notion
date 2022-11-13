@@ -5,6 +5,8 @@ import { MoonIcon, SunIcon } from "@heroicons/react/solid";
 import { zustantStore } from "../utils/store";
 import clsx from "clsx";
 import config from "../../site.config";
+import Link from "next/link";
+import Image from "next/image";
 
 export const Navbar = () => {
   const { isDark, changeTheme } = zustantStore();
@@ -27,7 +29,22 @@ export const Navbar = () => {
         {config.navigationBarTitle}
       </h1>
 
-      <div className="flex items-center">
+      <div className="flex items-center gap-4">
+        <Link
+          href="https://global-vulture-225.notion.site/Resume-b9a259743fdb4f06b2fd53011631a9f9"
+          className={clsx(
+            "p-1 flex items-center rounded-md font-semibold",
+            isDark && "bg-white"
+          )}
+        >
+          <Image
+            src="/assets/notion-logo.svg"
+            width={20}
+            height={20}
+            alt="notion"
+          />
+        </Link>
+
         <button onClick={changeTheme}>
           {isDark ? (
             <SunIcon className="w-6 h-6 text-sky-500" />
