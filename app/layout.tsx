@@ -10,6 +10,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  if (typeof window === "undefined") return <></>;
+
   const { isDark } = zustantStore();
 
   return (

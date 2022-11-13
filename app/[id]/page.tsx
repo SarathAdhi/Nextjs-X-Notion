@@ -15,8 +15,6 @@ async function getNotionPage(id: string) {
 const ViewPage = ({ params }: Props) => {
   const id = params.id;
 
-  console.log(id);
-
   const recordMap = use(getNotionPage(id as string));
 
   return <NotionRender recordMap={recordMap} />;
