@@ -5,6 +5,7 @@ import "./globals.css";
 import clsx from "clsx";
 import { zustantStore } from "../common/utils/store";
 import { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
 
 export default function RootLayout({
   children,
@@ -20,20 +21,17 @@ export default function RootLayout({
   }, [isLoading]);
 
   return (
-    <html>
+    <html className={clsx(isDark && "dark")}>
       <head />
-      <body
-        className={clsx(
-          "flex flex-col transition min-h-screen",
-          isDark ? "bg-[#191919]" : "bg-white"
-        )}
-      >
+      <body className="flex flex-col transition min-h-screen dark:bg-[#191919] bg-white">
         {!isLoading && (
           <>
             <Navbar />
             <main className="flex flex-col flex-1">{children}</main>
           </>
         )}
+
+        <Toaster position="bottom-center" reverseOrder={false} />
       </body>
     </html>
   );

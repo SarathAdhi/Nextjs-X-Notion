@@ -14,28 +14,15 @@ export const Navbar = () => {
   if (!config.showNavbar) return <></>;
 
   return (
-    <header
-      className={clsx(
-        "w-full px-4 py-3 z-[9999] flex justify-between items-center border-b",
-        isDark ? "bg-[#191919]" : "bg-white"
-      )}
-    >
-      <h1
-        className={clsx(
-          "text-2xl font-bold truncate mr-4",
-          isDark ? "text-white" : "text-black"
-        )}
-      >
+    <header className="w-full px-4 py-3 z-[9999] flex justify-between items-center border-b dark:bg-[#191919] bg-white">
+      <h1 className="text-2xl font-bold truncate mr-4 dark:text-white text-black">
         {config.navigationBarTitle}
       </h1>
 
       <div className="flex items-center gap-4">
         <Link
           href="https://global-vulture-225.notion.site/Resume-b9a259743fdb4f06b2fd53011631a9f9"
-          className={clsx(
-            "p-1 flex items-center rounded-md font-semibold",
-            isDark && "bg-white"
-          )}
+          className="p-1 flex items-center rounded-md font-semibold dark:bg-white"
         >
           <Image
             src="/assets/notion-logo.svg"
